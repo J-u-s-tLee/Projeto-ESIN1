@@ -15,7 +15,7 @@
                     $profile_picture = $userInfo['photo'] ? $userInfo['photo'] : 'default.png';
                 ?>
                 <img src="../Images/<?php echo htmlspecialchars($profile_picture); ?>" alt="Profile Picture" class="profile-picture">
-                <form action="../view/view_editprofile.php" method="POST"> 
+                <form action="../view/list_editprofile.php" method="POST"> 
                     <button type="submit" name="edit_profile" class="edit-button">Edit Profile</button>
                 </form>
                 </div>
@@ -48,10 +48,7 @@
             <?php if ($isParticipant) { ?>
                 <div class="lecture-workshop-grid">
                     <?php
-                    $max_rows = max(
-                        is_array($userLectures) ? count($userLectures) : 0, 
-                        is_array($userWorkshops) ? count($userWorkshops) : 0
-                    );
+                    $max_rows = max(count($userLectures), count($userWorkshops));
                     $lectureIndex = 0;
                     $workshopIndex = 0;
                     ?> 

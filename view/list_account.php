@@ -12,7 +12,6 @@ if (isset($_SESSION['user_id'])) {
     $isParticipant = strpos($user_id, 'P') === 0;
 
     $userInfo = getPersonInfo($user_id);
-
     if($isSpeakerLecture) {
         $lectureInfo = getLecture($user_id);
         $travelInfo = getTravelInfo($user_id);

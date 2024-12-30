@@ -206,3 +206,33 @@ VALUES
 ('B317', '2025-03-15 14:30:00', 15, 5, 'W1'),
 ('B105', '2025-03-15 17:00:00', 10, 10, 'W2'),
 ('B018', '2025-03-15 09:00:00', 15, 5, 'W3');
+
+/* Inserir informações caso pretenda
+UPDATE Lecture
+SET 
+    title = 'Financial Leverage',
+    lecture_description = 'In Financial Leverage, I''ll guide you through how borrowing capital can amplify returns and fuel growth when used wisely. Drawing from real-world examples and years of experience, I''ll break down leverage ratios, risk management, and strategic applications that drive financial success.'
+WHERE identifier = 'L1';
+
+UPDATE Workshop
+SET 
+    title = 'Accidental Project Manager',
+    workshop_description = 'In this workshop, I''ll share insights and practical strategies for those who find themselves unexpectedly managing projects. We''ll explore essential skills like prioritization, communication, and delegation to help you excel in your new role. With real-world examples and interactive exercises, this session is designed to empower anyone stepping into project management without prior preparation. Let''s turn your accidental role into a purposeful success.'
+WHERE identifier = 'W1';
+
+UPDATE PERSON
+SET 
+    name = 'Alice',
+    age = 30,
+    job_description = 'Data Scientist specialized in analyzing complex datasets to uncover actionable insights. My work combines expertise in machine learning and statistical modeling to drive decision-making across various industries.',
+    food_restrictions = 'Vegetarian'
+WHERE identifier = 'L1';
+
+UPDATE PERSON
+SET 
+    name = 'Bob',
+    age = 40,
+    job_description = 'Experienced software engineer known for developing robust and scalable applications. My work is based in excel in designing and implementing efficient systems that solve challenging technical problems.',
+    food_restrictions = 'Gluten-free'
+WHERE identifier = 'W1';
+*/

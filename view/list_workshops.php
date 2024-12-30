@@ -13,6 +13,7 @@ try {
     $Enrollment = getRegistrationById($_SESSION['user_id']);
     $firstLetter = substr($_SESSION['user_id'], 0, 1);
     $rowCount = getNumberOfWorkshops();
+    $firstLetter = substr($_SESSION['user_id'], 0, 1);
 
 } catch (PDOException $e) {
     $error_msg = $e->getMessage();

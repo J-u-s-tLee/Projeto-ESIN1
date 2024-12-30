@@ -35,5 +35,5 @@ if ($isSpeakerLecture) {
     }
 }
 
-header('Location: ../view/view_account.php');
+header('Location: ../view/list_account.php');
 ?>

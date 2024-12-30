@@ -7,7 +7,7 @@ require_once('../database/lectures.php');
 if (isset($_SESSION['user_id'])) {
     $room = $_POST['room'];
     $start_time = $_POST['start_time'];
-    $lecture_id = $_POST['lecture_id'];
+    $user_id = $_SESSION['user_id'];
     try {
         signUpForLecture($user_id, $room, $start_time);
         header('Location: ../view/list_lectures.php');

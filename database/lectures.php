@@ -43,10 +43,12 @@
     }
     function countParticipants($room, $start_time) {
         global $dbh;
-        $stmt = $dbh->prepare('SELECT COUNT(*) FROM ParticipantLecture WHERE room =? AND start_time =?');
-        $stmt->execute(array($room, $start_time));
+        $stmt = $dbh->prepare('SELECT COUNT(*) FROM ParticipantLecture WHERE room = :room AND start_time = :start_time');
+        $stmt->bindParam(':room', $room, PDO::PARAM_STR);
+        $stmt->bindParam(':start_time', $start_time, PDO::PARAM_STR);
         $stmt->execute();
-        return $stmt->fetchColumn();
+        $count = $stmt->fetchColumn();
+        return $count;
     }
     function signUpForLecture($user_id, $room, $start_time) {
         global $dbh;

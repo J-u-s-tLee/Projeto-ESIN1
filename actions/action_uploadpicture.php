@@ -32,6 +32,6 @@ if ($check !== false) {
 } else {
     echo "File is not an image.";
 }
-header('Location: ../view/view_editprofile.php');
+header('Location: ../view/list_editprofile.php');
 
 ?>

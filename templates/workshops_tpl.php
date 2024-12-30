@@ -30,7 +30,7 @@
                                                 <div class='infos'>
                                                     <h2>From " . htmlspecialchars($start_time) . " to " . htmlspecialchars($end_time) . " at " . htmlspecialchars($workshop['room']) .  
                                                     " | Instructor: " . htmlspecialchars($person['name']) . "</p>
-                                                        <h3> Capacity: " . htmlspecialchars($workshop['capacity'] -  countParticipants($pdo, $workshop['room'], $workshop['start_time'])) . " participants 
+                                                        <h3> Capacity: " . htmlspecialchars($workshop['capacity'] -  countParticipants($workshop['room'], $workshop['start_time'])) . " participants 
                                                         | Price: " . htmlspecialchars($workshop['price']) . "€ </h4>    
                                                 </div>
                                                 <div class='description'>
@@ -39,7 +39,7 @@
                                                         $isAlreadySignedUp = false;
                                                         if($firstLetter == 'P') {
                                                             if($Enrollment['registration_id'] == $_SESSION['user_id']) {
-                                                                if (countParticipants($pdo, $workshop['room'], $workshop['start_time']) < $workshop['capacity']) {
+                                                                if (countParticipants($workshop['room'], $workshop['start_time']) < $workshop['capacity']) {
                                                                     foreach ($ParticipantWorkshop as $participantWorkshop) {
                                                                         if($_SESSION['user_id'] == $participantWorkshop['participant'] &&
                                                                         $activity['room'] == $participantWorkshop['room'] &&
@@ -47,10 +47,10 @@
                                                                             $isAlreadySignedUp = true;
                                                                         }
                                                                     }
-                                                                    if ($isAlreadySignedUp) { //Alterar aqui
+                                                                    if ($isAlreadySignedUp) {
                                                                         echo "<p>You are already signed up for this workshop!</p>";
                                                                     } else {
-                                                                        echo "<form method='POST'>
+                                                                        echo "<form method='POST' action='../actions/action_workshops.php'>
                                                                                 <input type='hidden' name='room' value='" . htmlspecialchars($workshop['room']) . "'>
                                                                                 <input type='hidden' name='start_time' value='" . htmlspecialchars($workshop['start_time']) . "'>
                                                                                 <input type='hidden' name='workshop_id' value='" . htmlspecialchars($workshop['identifier']) . "'>
@@ -79,7 +79,7 @@
                     }
                 } 
             }?>
-            <?php if(!$hasworkshops) { echo "<div class='no-lectures'>No Workshops available at the moment!</div>";} ?>
+            <?php if(!$hasworkshops) { echo "<div class='no-workshops'>No Workshops available at the moment!</div>";} ?>
         </main>
             <?php include('footer.php') ?>
     </body>

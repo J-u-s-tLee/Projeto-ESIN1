@@ -14,11 +14,6 @@
                 <?php if ($is_speaker === 'yes'): ?>
                     <fieldset>
                         <h1>Speaker Details</h1>
-                        <?php if (!empty($error_message)): ?>
-                            <div class="error-message">
-                                <p><?php echo htmlspecialchars($error_message); ?></p>
-                            </div>
-                        <?php endif; ?>
                         <div class="field-row">
                             <label>Speaker ID:
                                 <input type="text" name="speaker_identifier" value="<?php echo $speaker_identifier; ?>" required>

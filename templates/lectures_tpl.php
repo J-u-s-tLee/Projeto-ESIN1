@@ -36,24 +36,24 @@
                                                     <p>" . htmlspecialchars($person['name']) . "</p>
                                                     <p>" . htmlspecialchars($person['job_description']) . "</p>
                                                     <p>Room: " . htmlspecialchars($lecture['room']) . " | Duration: " . htmlspecialchars($start_time) . " - " . htmlspecialchars($end_time) . "</p>
-                                                    <p> Capacity: " . htmlspecialchars($lecture['capacity'] -  countParticipants($pdo, $lecture['room'], $lecture['start_time'])) . " participants </p>";
-                                                    //Adicipnei capacity
+                                                    <p> Capacity: " . htmlspecialchars($lecture['capacity'] -  countParticipants($lecture['room'], $lecture['start_time'])) . " participants </p>";
+                                                    
                                                 if (isset($_SESSION['user_id'])) {
                                                     $isAlreadySignedUp = false;
                                                     if($firstLetter == 'P') {
                                                         if($Enrollment['registration_id'] == $_SESSION['user_id']) {
-                                                            if (countParticipants($pdo, $lecture['room'], $lecture['start_time']) < $lecture['capacity']) {
+                                                            if (countParticipants($lecture['room'], $lecture['start_time']) < $lecture['capacity']) {
                                                                 foreach ($ParticipantLecture as $participantLecture) {
                                                                     if($_SESSION['user_id'] == $participantLecture['participant'] &&
-                                                                    $activity['room'] == $participantLecture['room'] &&
-                                                                    $activity['start_time'] == $participantLecture['start_time']){
+                                                                        $activity['room'] == $participantLecture['room'] &&
+                                                                        $activity['start_time'] == $participantLecture['start_time']){
                                                                         $isAlreadySignedUp = true;
                                                                     }
                                                                 }
-                                                                if ($isAlreadySignedUp) { //Alterar aqui
+                                                                if ($isAlreadySignedUp) {
                                                                     echo "<p>You are already signed up for this lecture!</p>";
                                                                 } else {
-                                                                    echo "<form method='POST' action='../actions/lectures_action.php'>
+                                                                    echo "<form method='POST' action='../actions/action_lectures.php'>
                                                                             <input type='hidden' name='room' value='" . htmlspecialchars($lecture['room']) . "'>
                                                                             <input type='hidden' name='start_time' value='" . htmlspecialchars($lecture['start_time']) . "'>
                                                                             <input type='hidden' name='lecture_id' value='" . htmlspecialchars($lecture['identifier']) . "'>

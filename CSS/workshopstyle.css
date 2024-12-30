@@ -111,7 +111,7 @@ button:active {
     transform: scale(0.95); 
 }
 
-.no-lectures {
+.no-workshops {
     margin: 1vw;
     color: #1134a6;
     background-color: rgba(255,255,255,0.5);

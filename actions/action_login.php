@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($user) {
         if (validatePassword($password, $user['password'])) {
             $_SESSION['user_id'] = $user['identifier'];
-            header("Location: ../view/view_account.php");
+            header("Location: ../view/list_account.php");
             exit;
         } else {
             $error_message = "Invalid credentials. Please try again.";

@@ -83,6 +83,7 @@
             PL.participant = :userLecture_id');
         $stmt->bindParam(':userLecture_id', $id, PDO::PARAM_STR);
         $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     function getFullWorkshop($id) {
         global $dbh;
@@ -107,5 +108,6 @@
         PW.participant = :userWorkshop_id');
         $stmt->bindParam(':userWorkshop_id', $id, PDO::PARAM_STR);
         $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 ?>

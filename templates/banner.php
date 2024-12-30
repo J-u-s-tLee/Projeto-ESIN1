@@ -21,7 +21,7 @@
                 <li><a href="../view/list_schedule.php">Schedule</a></li>
                 <li><a href="../view/list_coffeebreaks.php">Coffee Breaks</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <li><a href="../view/view_account.php">My Account</a></li>
+                    <li><a href="../view/list_account.php">My Account</a></li>
                 <?php else: ?>
                     <li><a href="../view/list_login.php">Login/Signup</a></li>
                 <?php endif; ?>
