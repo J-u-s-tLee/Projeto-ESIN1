@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*Estilo do fundo*/
+body {
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+/*Estilo do Coffe Break: Schedules and Menus*/
+#coffeebreaks h2 {
+    font-size: 3.2vw;
+    padding: 2vw 1vw 1vw;
+    text-align: center;
+    color: #1134a6;
+}
+
+.coffee-break {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 2vw; 
+    border-radius:2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coffee-break-info h3 {
+    color: #1134a6;
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 1vw;
+    text-align: center;
+}
+
+.coffee-break-info p {
+    font-size: 1.7vw;
+    color: #1134a6;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+    padding: 0vw 2vw 2vw;
+}
+
+.menu-card {
+    background-color: #fff;
+    border-radius: 1.5vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20%;
+    min-width: 200px;
+    padding: 1vw;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: visible;
+}
+
+.menu-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.menu-card img {
+    width: 60%; 
+    height: auto; 
+    margin: 0 auto; 
+}
+
+.menu-card h4 {
+    font-size: 1.5vw;
+    color: #1134a6;
+    margin-bottom: 0.5vw;
+    padding: 1vw;
+}
+
+.menu-card p {
+    font-size: 1.2vw;      
+    color: #1134a6;           
+    padding: 1vw;
+    line-height: 1.8;       
+    margin-top: 20px;      
+}

@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body {
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+.details {
+    margin: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex: 1;
+}
+.profile-picture, .Information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-picture {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1vw;
+    padding: 1vw;
+    margin: 0 1vw 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5vw;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.upload-input {
+    font-size: 1vw;
+    padding: 0.5vw;
+    border: none;
+    border-radius: 1vw;
+    background-color: white;
+    display: block;
+}
+
+button[name="upload_picture"] {
+    grid-area: button;
+    background-color: #1134a6;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+button[name="upload_picture"]:hover {
+    background-color: #688fe5;
+    transition: background-color 0.5s;
+}
+
+.Information {
+    width: 70vw;
+    display: grid;
+    column-gap: 1vw;
+    row-gap: 1vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5vw  5vw 1fr auto auto;
+    grid-template-areas:
+        "title title"
+        "name age"
+        "description food_restrictions"
+        "nationality residence"
+        "button button";
+    height: 100%;
+}
+
+.Information h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3vw;
+    grid-area: title;
+}
+.name {
+    grid-area: name;
+}
+.age {
+    grid-area: age;
+}
+.food_restrictions {
+    grid-area: food_restrictions;
+    height: 100%;
+    font-size: 1.5vw;
+}
+.description {
+    grid-area: description;
+    height: 100%;
+}
+.name, .age, .description, .nationality, .residence {
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.Information h1, .name, .age, .description, .food_restrictions, .nationality, .residence {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1vw;
+    padding: 1vw;
+    color: #1134a6;
+}
+
+#name, #age, #nationality, #residence {
+    margin: 0 0 0 0.5vw;
+}
+
+#name, #age, #description, #specify, #nationality, #residence {
+    font-size: 1.5vw;
+    width: 100%;
+    text-align: center;
+    color: #1134a6;
+    background-color: rgba(255, 255, 255);
+    border-radius: 1vw;
+    border: none;
+    padding: 0.5vw;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#description {
+    height: 100%;
+}
+
+.nationality {
+    grid-area: nationality;
+}
+
+.residence {
+    grid-area: residence;
+}
+
+.nationality, .residence {
+    margin: 2vw 0 0 0;
+}
+
+button[name="save_changes"] {
+    margin: 0.5vw 0 0 0;
+    grid-area: button;
+    background-color: #1134a6;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+button[name="save_changes"]:hover {
+    background-color: #688fe5;
+    transition: background-color 0.5s;
+}

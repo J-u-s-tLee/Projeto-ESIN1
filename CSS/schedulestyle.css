@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body {
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+#schedule h2 {
+    font-size: 3.2vw;
+    padding: 2vw 1vw 1vw;
+    text-align: center;
+    color: #1134a6;
+}
+
+.activity {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1vw;
+    border-radius: 2vw;
+    min-height: 15px;
+    padding: 1vw;
+    font-weight: bold;
+    font-size: 1.7vw;
+    text-align: center; 
+    display: block;
+}
+
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.activity ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 10px; 
+    align-items: center; 
+}
+
+.activity.coffee-break {
+    background-color: #e5ffe5bb; 
+    border-left: 5px solid #4caf50; 
+    border-right: 5px solid #4caf50;
+    color: #2e7d32;
+}
+
+.activity.workshop {
+    background-color: #d4f4ffbb; 
+    border-left: 5px solid #1c9cff; 
+    border-right: 5px solid #1c9cff;
+    color: #0d47a1;
+}
+
+.activity.lecture {
+    background-color: #ffe5b4bb; 
+    border-left: 5px solid #ff9f1c; 
+    border-right: 5px solid #ff9f1c; 
+    color: #e65100;
+}
+
+.time {
+    color: black;
+    text-align: left;
+    display: inline;
+    font-weight: normal;
+    font-size: 1.5vw;
+}
+
+.room {
+    color: black;
+    text-align: right;
+    display: inline;
+    font-weight: normal;
+    font-size: 1.5vw;
+}

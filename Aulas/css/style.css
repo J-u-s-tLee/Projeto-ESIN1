@@ -1,0 +1,190 @@
+/**
+ * Generic Styles
+ **/
+
+ html {
+  --primary-color: #C62828;
+
+  --background-color: #FFF;
+  --background-color-light: #EEE;
+  --background-color-dark: #DDD;
+
+  background-color: var(--background-color);
+  font-family: 'Merriweather', serif;
+
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  max-width: 60em;
+
+  margin: 0 auto;
+  background-color: var(--background-color-light);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+/**
+ * Header
+ **/
+
+body > header {
+  padding: 1em;
+  background-color: var(--background-color-dark);
+  border-bottom: 2px solid #333;
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
+
+body > header form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+body > header form input, body > header form a {
+  margin: 0.5em;
+}
+
+body > header form input[name=username],
+body > header form input[name=password]{
+  grid-column-end: span 2;
+}
+
+#logout {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+
+#logout img {
+  border-radius: 1em;
+}
+
+#cart {
+  align-self: center;
+  margin-right: 2em;
+}
+
+#cart-table {
+  width: 100%;
+}
+
+#cart-table img {
+  width: 4em;
+}
+
+#cart-table td:first-child {
+  width: 6em;
+}
+
+#cart-table th {
+  text-align: left;
+}
+
+/**
+ * Main Section
+ **/
+
+body > section {
+  padding: 1em;
+}
+
+/**
+ * Footer
+ **/
+
+body > footer {
+  background-color: var(--background-color-dark);
+
+  padding: 1em;
+}
+
+/**
+ * Categories
+ **/
+
+#categories ul {
+  display: flex;
+  padding: 0; margin: 0;
+  flex-wrap: wrap;
+}
+
+#categories ul li {
+  display: block;
+  flex-grow: 1;
+  padding: 1em; margin: 1em; 
+  
+  background-color: var(--background-color-dark);
+  text-align: center;
+  font-size: 2em;
+}
+
+/**
+ * Products
+ **/
+
+ #products .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#products .list article {
+  background-color: var(--background-color-dark);
+  padding: 1em; margin: 1em;
+  flex-grow: 1;
+
+  display: grid;
+  justify-items: center;
+}
+
+#products .list article h3 {
+  margin: 0;
+}
+
+#products .list article img {
+  border: 1px solid #333;
+  margin: 1em;
+}
+
+#products .list article .price {
+  color: red;
+  font-size: 2em;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+  font-size: 1.2em;
+  border-top: 2px solid #C62828;
+  padding: 1em;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+  border-bottom: 2px solid #C62828;
+  padding: 1em;
+}
+
+/**
+ * Registration
+ **/
+
+#registration input {
+  display: block;
+  margin-bottom: 1em;
+}

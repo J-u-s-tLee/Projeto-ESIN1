@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+body {
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+
+#login {
+    width: 30vw;
+    height: auto;
+    margin: 5vh auto;
+    padding: 2vw;
+    background: #fff;
+    border-radius: 1vw;
+    border: 0.1vw solid #688fe5;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+h1 {
+    font-size: 2vw;
+    color: #1134a6;
+    text-align: center;
+    margin-bottom:1.5vw;
+}
+
+h2 {
+    font-size: 1.2vw;
+    color: black;
+    margin-bottom:1vw;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #1134a6;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+label {
+    font-size: 1.2vw;
+    font-weight: bold; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8vw;
+    font-size: 1vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.5vw;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #688fe5;
+    box-shadow: 0 0 0.3rem #688fe5;
+}
+
+input[type="submit"] {
+    background-color: #688fe5;
+    color: white;
+    font-size: 1.2vw;
+    padding: 1vw 3vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4c4c8c;
+}
+
+.error-message {
+    color: #d8000c;
+    padding: 1vw;
+    font-size: 1vw;
+    text-align: center;
+    margin-top: 1vw;
+}

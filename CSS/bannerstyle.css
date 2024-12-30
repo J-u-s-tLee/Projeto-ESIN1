@@ -1,0 +1,31 @@
+#menu {
+    position: sticky;
+    top: 0;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+}
+
+#menu ul li {
+    flex: 1;
+    background-color: #688fe5;
+}
+
+#menu a {
+    font-size: 1.2vw;
+    line-height: 3.2vw;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+#menu ul li:hover{
+    a{font-size: 1.5vw;
+        transition: 0.5s;};
+    background-color: #bacffd;
+    transition: 0.5s;
+}

@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body {
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+.details {
+    display: grid;
+    column-gap: 1vw;
+    margin: 1vw;
+    row-gap: 1vw;
+    grid-template-columns: 20vw 20vw 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "photo ID name"
+        "photo age food_restrictions"
+        "photo description description"
+        "photo nationality residence";
+
+}
+
+.profile-picture {
+    grid-area: photo;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1vw;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ID{
+    grid-area: ID;
+}
+.name{
+    grid-area: name;
+}
+.age{
+    grid-area: age;
+}
+.food_restrictions {
+    grid-area: food_restrictions;
+}
+.description {
+    grid-area: description;
+    text-align: justify;
+}
+.nationality {
+    grid-area: nationality;
+}
+.residence {
+    grid-area: residence;
+}
+
+.ID, .name, .age, .food_restrictions, .description, .nationality, .residence {
+    font-size: 1.5vw;
+    color: #1134a6;
+    padding: 1vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.edit-button {
+    background-color: #1134a6;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw 5vw;
+    font-weight: bold;
+}
+
+.edit-button:hover {
+    background-color: #688fe5;
+    transition: background-color 0.5s;
+}
+
+.divisoria {
+    border: none;
+    border-top: 1vw solid #1134a6;
+    margin: 1vw 1vw;
+    border-radius: 1vw;
+}
+
+.lecture-workshop-grid {
+    display: grid;
+    column-gap: 1vw;
+    row-gap: 1vw;
+    margin: 1vw;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lecture-item, .workshop-item, .title-lecture, .title-workshop {
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #1134a6;
+}
+
+.lecture-item, .title-lecture {
+    grid-column: 1;
+}
+
+.workshop-item, .title-workshop {
+    grid-column: 2;
+}
+
+.lecture-item p:nth-child(1), .workshop-item p:nth-child(1) {
+    font-size: 2.5vw;
+}
+
+.lecture-item p:nth-child(2), .workshop-item p:nth-child(2) {
+    font-size: 2vw;
+    margin: 0.5vw 0 1vw;
+}
+
+.title-lecture, .title-workshop {
+    font-size: 3vw;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+}
+
+button[name="logout"] {
+    background-color: #1134a6;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw 0;
+    font-weight: bold;
+    width: 97vw;
+
+}
+
+button[name="logout"]:hover {
+    background-color: #688fe5;
+    transition: background-color 0.5s;
+}
+
+.speaker-information {
+    display: grid;
+    column-gap: 1vw;
+    margin: 1vw;
+    row-gap: 1vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "lecture travel hotel";
+}
+
+.lecture {
+    grid-area: lecture;
+    font-size: 2vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1134a6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lecture h1 {
+    text-align: center;
+}
+
+#title, #description {
+    font-size: 1.5vw;
+    color: #1134a6;
+    background-color: rgba(255, 255, 255);
+    border-radius: 1vw;
+    border: none;
+    padding: 1vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#description {
+    text-align: justify;
+    height: auto;
+    min-height: 15vw;
+    resize: vertical;
+    overflow: hidden;
+}
+
+button[name="update_lectures"], button[name="update_workshops"] {
+    background-color: #1134a6;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw 0;
+    font-weight: bold;
+    width: 100%;
+    align-self: flex-end;
+}
+
+button[name="update_lectures"]:hover, button[name="update_workshops"]:hover {
+    background-color: #688fe5;
+    transition: background-color 0.5s;
+}
+
+.travel, .hotel {
+    grid-area: travel;
+    font-size: 2vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1134a6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.travel h1, .hotel h1 {
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+.picture {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.picture img {
+    width: 100%;
+}
+
+.travel .content {
+    gap: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.hotel {
+    grid-area: hotel;
+}
+
+.workshop {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1vw;
+    border-radius: 1vw;
+    padding: 1vw 1.5vw;
+    font-size: 2vw;
+    color: #1134a6;
+}
+
+.workshop h1 {
+    font-size: 4vw;
+    text-align: center;
+}

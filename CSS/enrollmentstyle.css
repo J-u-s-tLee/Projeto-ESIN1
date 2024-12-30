@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body {
+    background-image: url('../Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+#enrollment {
+    color: #1134a6;
+    margin: 1vw;
+}
+
+#enrollment h1 {
+    background-color: rgba(255,255,255,0.5);
+    font-size: 3vw;
+    padding: 1vw;
+    font-weight: bold;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+#enrollment p {
+    background-color: rgba(255,255,255,0.5);
+    font-size: 1.5vw;
+    margin: 1vw 0;
+    padding: 1vw;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+#enrollment .info {
+    background-color: rgba(255,255,255,0.5);
+    font-size: 1.5vw;
+    margin: 1vw 0;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+#enrollment .info p {
+    margin-bottom: 0.5vw;
+}
+
+#enrollment .info p strong {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+form button {
+    background-color: #1134a6;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.8vw 2vw;
+    margin: 1vw 0 0;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+form button:hover {
+    background-color: #688fe5;
+}
